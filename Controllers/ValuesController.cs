@@ -55,7 +55,7 @@ namespace to_do_list.Controllers
     {
         var e = item.SingleOrDefault(items => items.Id == id);
             if (e == null) { return NotFound(); };
-            //if the item not done iw won't be deleted 
+            //if the item not done item won't be deleted 
             if(e.status==false) {  return BadRequest(); }
             item.Remove(e);
             return NoContent();
